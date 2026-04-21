@@ -1,13 +1,6 @@
-console.log("-- Datatyper --")
-console.log("✅ johan =", typeof 'johan')
-console.log("✅", 123, "=", typeof 123)
-console.log("✅", true, "=", typeof true)
-console.log("✅", undefined, "=", typeof undefined)
-console.log("✅", null, "=", typeof null)
-console.log("✅", [], "array", "=", typeof [])
-console.log("✅", {}, "=", typeof {})
+/* Vad är datatyper och variabler? */
 
-/* Datatyper */
+//? Datatyper
 // string - text
 // number - 123
 // boolean - true/false
@@ -17,12 +10,21 @@ console.log("✅", {}, "=", typeof {})
 //----------------------------------
 // bigint - Väldigt stora nummer
 // symbol - Ingnorera just nu
+//----------------------------------
 
 // array - [1, 2, 3, 4, 5] = object
 // functions
 
-/* Varibler */
+console.log("-- Datatyper --")
+console.log("✅ johan =", typeof 'johan')
+console.log("✅", 123, "=", typeof 123)
+console.log("✅", true, "=", typeof true)
+console.log("✅", undefined, "=", typeof undefined)
+console.log("✅", null, "=", typeof null)
+console.log("✅", [], "array", "=", typeof [])
+console.log("✅", {}, "=", typeof {})
 
+//? Varibler
 // var (gammal,  används inte idag)
 // ----- Moderna varibler -----
 // let
@@ -49,7 +51,7 @@ console.log(stad)
 
 //! Uncaught TypeError: Assignment to constant variable.
 
-// Array
+//? Array
 const fruits = [
     "🍍 ananas",
     "🍊 aplesin",
@@ -65,7 +67,8 @@ console.log("-- Array --")
 console.log(fruits)
 console.log("Antal frukter = ", fruits.length)
 
-//Object
+//? Object
+// Obejects har nyckel/värdepar
 const teacher = {
     user: "johan",
     age: 44,
