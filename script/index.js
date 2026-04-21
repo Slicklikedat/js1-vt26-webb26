@@ -1,11 +1,11 @@
-console.log("--- Datatyper ---")
-console.log('johan =', typeof 'johan')
-console.log('123 =', typeof 123)
-console.log('true =', typeof true)
-console.log("undefined =", typeof undefined)
-console.log("null =", typeof null)
-console.log("[] =", typeof [])
-console.log("{} =", typeof {})
+console.log("-- Datatyper --")
+console.log("✅ johan =", typeof 'johan')
+console.log("✅", 123, "=", typeof 123)
+console.log("✅", true, "=", typeof true)
+console.log("✅", undefined, "=", typeof undefined)
+console.log("✅", null, "=", typeof null)
+console.log("✅", [], "array", "=", typeof [])
+console.log("✅", {}, "=", typeof {})
 
 /* Datatyper */
 // string - text
@@ -30,7 +30,7 @@ console.log("{} =", typeof {})
 
 //varibel let = får skriva över data
 let name = "🔥 Johan"
-console.log("--- Variabel let ---")
+console.log("-- Variabel let --")
 console.log(name)
 
 name = "🌊 Stina"
@@ -40,7 +40,7 @@ console.log(name)
 //varibel const = får INTE skriva över data
 
 const stad = "🌆 Malmö"
-console.log("--- Variabel const ---")
+console.log("-- Variabel const --")
 console.log(stad)
 
 // stad = "🌃 Göteborg"
@@ -61,11 +61,21 @@ const numbersArray = [1, 2, 3, 4, 5]
 
 const mixedArray = ["string", true, 1, null]
 
-console.log("--- Array ----")
+console.log("-- Array --")
 console.log(fruits)
 console.log("Antal frukter = ", fruits.length)
 
 //Object
+const teacher = {
+    user: "johan",
+    age: 44,
+    course: "Javascript 1",
+    couserActive: true
+}
+
+console.log("-- Object --")
+console.log(teacher)
+
 const teachers = [
     {
         user: "johan",
@@ -81,6 +91,5 @@ const teachers = [
     }
 ]
 
-console.log("--- Object ----")
+console.log("-- Objects in Array --")
 console.log(teachers)
-
