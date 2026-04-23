@@ -107,3 +107,29 @@ console.log("-- Objekt i en array --")
 console.log("Alla lärare:", teachers)
 console.log("Första läraren:", teachers[0].user)
 console.log("Andra lärarens kurs:", teachers[1].course)
+
+
+const students = [
+  {
+    user: "Johan",
+    age: 44,
+    courses: [
+      "javascript 1",
+      "html&css"
+    ],
+    courseActive: true
+  },
+  {
+    user: "Stina",
+    age: 33,
+    courses: [
+      "git",
+      "javascipt 3"
+    ],
+    courseActive: false
+  }
+]
+
+for (let i = 0; i < students.length; i++) {
+  console.log(students[i].age)
+}
