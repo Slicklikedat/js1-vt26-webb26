@@ -1,98 +1,109 @@
-/* Vad är datatyper och variabler? */
+/* Grundexempel: datatyper, variabler, arrayer och objekt */
 
-//? Datatyper
-// string - text
-// number - 123
-// boolean - true/false
-// undefined - inget värde
-// null - inget värde
-// object - {key: value, key: value}
-//----------------------------------
-// bigint - Väldigt stora nummer
-// symbol - Ingnorera just nu
-//----------------------------------
-
-// array - [1, 2, 3, 4, 5] = object
-// functions
+// =========================
+// 1. Datatyper
+// =========================
+// En datatyp beskriver vilken sorts värde vi jobbar med.
+// Några vanliga datatyper i JavaScript:
+// string    = text
+// number    = tal
+// boolean   = true eller false
+// undefined = ett värde som inte har fått något innehåll än
+// null      = ett medvetet "tomt" värde
+// object    = samling av data, till exempel objekt och arrayer
 
 console.log("-- Datatyper --")
-console.log("✅ johan =", typeof 'johan')
-console.log("✅", 123, "=", typeof 123)
-console.log("✅", true, "=", typeof true)
-console.log("✅", undefined, "=", typeof undefined)
-console.log("✅", null, "=", typeof null)
-console.log("✅", [], "array", "=", typeof [])
-console.log("✅", {}, "=", typeof {})
 
-//? Varibler
-// var (gammal,  används inte idag)
-// ----- Moderna varibler -----
-// let
-// const
+// typeof används för att kontrollera vilken datatyp ett värde har.
+console.log("'johan' =", typeof "johan")
+console.log("123 =", typeof 123)
+console.log("true =", typeof true)
+console.log("undefined =", typeof undefined)
 
-//varibel let = får skriva över data
-let name = "🔥 Johan"
-console.log("-- Variabel let --")
-console.log(name)
+// null är ett specialfall i JavaScript.
+// typeof null returnerar "object", även om null inte är ett vanligt objekt.
+console.log("null =", typeof null)
 
-name = "🌊 Stina"
+// En array är tekniskt sett också en typ av object i JavaScript.
+console.log("[] =", typeof [])
+console.log("{} =", typeof {})
 
-console.log(name)
+// =========================
+// 2. Variabler
+// =========================
+// Variabler används för att spara data så att vi kan återanvända den senare.
+// Moderna sätt att skapa variabler:
+// let   = värdet får ändras senare
+// const = värdet ska inte kunna ersättas med något annat
 
-//varibel const = får INTE skriva över data
+console.log("-- Variabler --")
 
-const stad = "🌆 Malmö"
-console.log("-- Variabel const --")
-console.log(stad)
+// let passar när vi vet att värdet kan ändras.
+let studentName = "Johan"
+console.log("Startvärde i studentName:", studentName)
 
-// stad = "🌃 Göteborg"
+studentName = "Stina"
+console.log("Nytt värde i studentName:", studentName)
 
-// console.log(stad)
+// const passar när vi vill låsa själva variabeln till ett värde.
+const city = "Malmö"
+console.log("Värdet i city:", city)
 
-//! Uncaught TypeError: Assignment to constant variable.
+// Om vi försöker skriva över en const får vi ett fel.
+// Testa gärna att avkommentera raden nedan för att se felet i konsolen.
+// city = "Göteborg"
 
-//? Array
-const fruits = [
-    "🍍 ananas",
-    "🍊 aplesin",
-    "🍎 äpple",
-    "🥝 kiwi"
-]
+// =========================
+// 3. Arrayer
+// =========================
+// En array används när vi vill spara flera värden i en lista.
 
-const numbersArray = [1, 2, 3, 4, 5]
+const fruits = ["ananas", "apelsin", "äpple", "kiwi"]
+const numbers = [1, 2, 3, 4, 5]
+const mixedValues = ["text", true, 1, null]
 
-const mixedArray = ["string", true, 1, null]
+console.log("-- Arrayer --")
+console.log("Frukter:", fruits)
+console.log("Antal frukter:", fruits.length)
+console.log("Första frukten:", fruits[0])
+console.log("Sista talet:", numbers[numbers.length - 1])
+console.log("Blandad array:", mixedValues)
 
-console.log("-- Array --")
-console.log(fruits)
-console.log("Antal frukter = ", fruits.length)
+// =========================
+// 4. Objekt
+// =========================
+// Ett objekt använder nyckel/värde-par för att beskriva något mer tydligt.
 
-//? Object
-// Obejects har nyckel/värdepar
 const teacher = {
-    user: "johan",
-    age: 44,
-    course: "Javascript 1",
-    couserActive: true
+  user: "Johan",
+  age: 44,
+  course: "JavaScript 1",
+  courseActive: true
 }
 
-console.log("-- Object --")
-console.log(teacher)
+console.log("-- Objekt --")
+console.log("Hela objektet:", teacher)
+console.log("Lärarens namn:", teacher.user)
+console.log("Aktiv kurs:", teacher.course)
 
+// Vi kan också lägga flera objekt i en array.
+// Det är vanligt när vi vill spara flera personer, produkter eller poster.
 const teachers = [
-    {
-        user: "johan",
-        age: 44,
-        course: "Javascript 1",
-        couserActive: true
-    },
-    {
-        user: "stina",
-        age: 33,
-        course: "html/css",
-        couserActive: false
-    }
+  {
+    user: "Johan",
+    age: 44,
+    course: "JavaScript 1",
+    courseActive: true
+  },
+  {
+    user: "Stina",
+    age: 33,
+    course: "HTML/CSS",
+    courseActive: false
+  }
 ]
 
-console.log("-- Objects in Array --")
-console.log(teachers)
+console.log("-- Objekt i en array --")
+console.log("Alla lärare:", teachers)
+console.log("Första läraren:", teachers[0].user)
+console.log("Andra lärarens kurs:", teachers[1].course)
