@@ -1,14 +1,11 @@
+// IF-SATSER
+// En if-sats låter oss köra olika kod beroende på om ett villkor är sant eller falskt.
 
 const age = 18
 
-// if (age > 18) {
-//     console.log("✅ Du är myndig!")
-// }
-
-// if (age < 18) {
-//     console.log("🛑 Du är inte myndig!")
-// }
-
+// Här kontrollerar vi om personen är 18 år eller äldre.
+// Om villkoret blir true körs koden i if-blocket.
+// Annars körs koden i else-blocket.
 if (age >= 18) {
     console.log("✅ Du är myndig!")
 } else {
@@ -17,18 +14,23 @@ if (age >= 18) {
 
 const temperature = 8
 
+// Ett enkelt exempel med jämförelse.
+// Är temperaturen mindre än 10?
 if (temperature < 10) {
     console.log("🥶 Det är kallt")
 } else {
     console.log("🥵 Det är varmt")
 }
 
-// && OCH || ELLER
+// LOGISKA OPERATORER
+// && betyder OCH: alla villkor måste vara true.
+// || betyder ELLER: det räcker att ett villkor är true.
 
 const hasPassword = true
 const isAdmin = true
 const isSuperman = true
 
+// För att få tillgång måste ALLT här vara sant.
 if (hasPassword && isAdmin && isSuperman && age >= 18) {
     console.log("🔓✅ Du får tillgång till systemet!")
 } else {
@@ -38,56 +40,49 @@ if (hasPassword && isAdmin && isSuperman && age >= 18) {
 const isMember = false
 const hasCoupon = true
 
+// Här räcker det att man antingen är medlem ELLER har kupong.
+// Men dessutom måste man vara Superman.
 if ((isMember || hasCoupon) && isSuperman) {
-    console.log("🤑 You get the discount!")
+    console.log("🤑 Du får rabatten!")
 } else {
-    console.log("🛑 You don't get the discount!")
+    console.log("🛑 Du får inte rabatten!")
 }
 
 /*
-----------------------------------------------------------------
-? Falsy
-----------------------------------------------------------------
-Value	        Type	    Description
-null	        Null	    The keyword null — the absence of any value.
-undefined	    Undefined	undefined — the primitive value.
-false	        Boolean	    The keyword false.
-NaN	            Number	    Not a Number (represents an invalid or undefined result from a calculation.)
-0	            Number	    The Number zero, also including 0.0, 0x0, etc.
--0	            Number	    The Number negative zero, also including -0.0, -0x0, etc.
-0n	            BigInt	    The BigInt zero, also including 0x0n, etc. Note that there is no BigInt negative zero — the negation of 0n is 0n.
-""	            String	    Empty string value, also including '' and ``.
-document.all	Object	    The only falsy object in JavaScript is the built-in document.all.
+Falsy-värden
+-------------
+Vissa värden räknas som false i villkor, trots att de inte bokstavligen är skrivna som false.
 
-----------------------------------------------------------------
-? Truthy
-----------------------------------------------------------------
-All values are truthy except false values.
+Exempel på falsy:
+- false
+- 0
+- ""
+- null
+- undefined
+- NaN
+
+Nästan allt annat är truthy.
 */
 
-//Truthy & falsy examples
-
-/* 
-Program = ett komplett system med tydlig struktur, ofta större och mer självständigt.
-
-Script = en mindre kodfil som körs för att göra något specifikt.
-*/
-
+// NaN är ett falsy-värde.
+// Därför kommer else-blocket att köras här.
 if (NaN) {
-    console.log("✅ Villkoret är Truthy")
+    console.log("✅ Villkoret är truthy")
 } else {
-    console.log("🛑 Meddelandet är Falsy")
+    console.log("🛑 Villkoret är falsy")
 }
 
-//* ! Logical NOT
+// LOGISKT INTE
+// ! vänder på ett boolean-värde:
+// true blir false
+// false blir true
 
 const isSpiderman = true
 
+// isSpiderman är true.
+// !isSpiderman blir därför false.
 if (!isSpiderman) {
-    console.log("🛑 Jag är inte spindelmannen!")
-
+    console.log("🛑 Jag är inte Spindelmannen!")
 } else {
-    console.log("✅ Jag är spindelmannen!")
-
+    console.log("✅ Jag är Spindelmannen!")
 }
-
