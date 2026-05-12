@@ -31,7 +31,7 @@ console.log(bokhyllaBöcker)
 const utvaldaBöcker = [bokhyllaBöcker.slice(1,2), bokhyllaBöcker.slice(3,4)]
 
 console.log(utvaldaBöcker)
-
+/*
 const elevLista = ["A", "B", "C", "D", "E", "F"]
 
 console.log (elevLista)
@@ -40,3 +40,4 @@ if (elevLista.indexOf("C"))
   const elevIndivid = ("C")
 else
   console.log("Eleven finns inte")
+*/
