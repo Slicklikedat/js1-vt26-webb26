@@ -40,4 +40,5 @@ if (elevLista.indexOf("C"))
   const elevIndivid = ("C")
 else
   console.log("Eleven finns inte")
+
 */
